@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dw4kkj815b676"]
+
+[ext_resource type="Script" uid="uid://bn6cut2cpiax6" path="res://scenes/world/world.gd" id="1_sl2e5"]
+[ext_resource type="Texture2D" uid="uid://dphcu2fhlx6vo" path="res://resources/textures/map/guide.jpg" id="2_1fp7r"]
+[ext_resource type="PackedScene" uid="uid://ddlto21j66avx" path="res://scenes/entities/City.tscn" id="2_sl2e5"]
+[ext_resource type="Texture2D" uid="uid://2j31wtjx8mxy" path="res://resources/textures/map/country_map.png" id="3_6m72w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dphjl"]
+load_path = "res://.godot/imported/map.jpg-3cc137e5bdd6ec21368967d1aa2747fc.ctex"
+
+[node name="World" type="Node2D" unique_id=793908757]
+script = ExtResource("1_sl2e5")
+
+[node name="FakeMap" type="Sprite2D" parent="." unique_id=28913868]
+visible = false
+scale = Vector2(36, 36)
+texture = SubResource("CompressedTexture2D_dphjl")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="FakeMap2" type="Sprite2D" parent="." unique_id=1068200264]
+scale = Vector2(5.273438, 5.2734375)
+texture = ExtResource("2_1fp7r")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="FakeMap3" type="Sprite2D" parent="." unique_id=1158434703]
+modulate = Color(0.48218971, 0.46939504, 0.5914929, 1)
+scale = Vector2(5.273438, 5.2734375)
+texture = ExtResource("3_6m72w")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="MapTiles" type="Node2D" parent="." unique_id=390231449]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2113509101]
+position = Vector2(13557, 9537)
+
+[node name="Cities" type="Node2D" parent="." unique_id=1477017498]
+
+[node name="Caracas" parent="Cities" unique_id=1069498352 instance=ExtResource("2_sl2e5")]
+position = Vector2(13541, 9540)
+connection_1 = NodePath("../Maracay")
+connection_2 = NodePath("../Petare")
+connection_3 = NodePath("../San Juan")
+
+[node name="Maracay" parent="Cities" unique_id=1687638231 instance=ExtResource("2_sl2e5")]
+position = Vector2(13522, 9558)
+connection_1 = NodePath("../Caracas")
+connection_2 = NodePath("../San Juan")
+connection_3 = NodePath("../Valencia")
+
+[node name="Valencia" parent="Cities" unique_id=782143392 instance=ExtResource("2_sl2e5")]
+position = Vector2(13477, 9563)
+
+[node name="Jacura" parent="Cities" unique_id=1421173116 instance=ExtResource("2_sl2e5")]
+position = Vector2(13340, 9463)
+
+[node name="San Juan" parent="Cities" unique_id=1943499876 instance=ExtResource("2_sl2e5")]
+position = Vector2(13554, 9584)
+connection_1 = NodePath("../Maracay")
+connection_2 = NodePath("../Caracas")
+connection_3 = NodePath("../Petare")
+
+[node name="Chaguaramas" parent="Cities" unique_id=486914098 instance=ExtResource("2_sl2e5")]
+position = Vector2(13626, 9623)
+
+[node name="Petare" parent="Cities" unique_id=644257322 instance=ExtResource("2_sl2e5")]
+position = Vector2(13593, 9540)
+connection_1 = NodePath("../Caracas")
+connection_2 = NodePath("../San Juan")
+
+[node name="Puerto la Cruz" parent="Cities" unique_id=762360594 instance=ExtResource("2_sl2e5")]
+position = Vector2(13870, 9568)
+
+[node name="Barcelona" parent="Cities" unique_id=383431335 instance=ExtResource("2_sl2e5")]
+position = Vector2(13846, 9574)
+
+[node name="Cumana" parent="Cities" unique_id=1536659482 instance=ExtResource("2_sl2e5")]
+position = Vector2(13904, 9545)
+
+[node name="Puente Torres" parent="Cities" unique_id=719967592 instance=ExtResource("2_sl2e5")]
+position = Vector2(13216, 9573)
+
+[node name="Barquisimeto" parent="Cities" unique_id=545707319 instance=ExtResource("2_sl2e5")]
+position = Vector2(13301, 9606)
+
+[node name="Acarigua" parent="Cities" unique_id=1623443556 instance=ExtResource("2_sl2e5")]
+position = Vector2(13302, 9661)
+
+[node name="Guanare" parent="Cities" unique_id=114530784 instance=ExtResource("2_sl2e5")]
+position = Vector2(13246, 9735)
+
+[node name="Barinas" parent="Cities" unique_id=239934649 instance=ExtResource("2_sl2e5")]
+position = Vector2(13198, 9811)
+
+[node name="Merida" parent="Cities" unique_id=1411213936 instance=ExtResource("2_sl2e5")]
+position = Vector2(13072, 9762)
+
+[node name="San Cristobal" parent="Cities" unique_id=993283428 instance=ExtResource("2_sl2e5")]
+position = Vector2(12939, 9903)
+
+[node name="Guasdualito" parent="Cities" unique_id=452833928 instance=ExtResource("2_sl2e5")]
+position = Vector2(13139, 9949)
+
+[node name="Cano Riecito" parent="Cities" unique_id=1873615235 instance=ExtResource("2_sl2e5")]
+position = Vector2(13326, 10033)
+
+[node name="Santa Rosa" parent="Cities" unique_id=1743699131 instance=ExtResource("2_sl2e5")]
+position = Vector2(13478, 10008)
+
+[node name="San Fernando de Apure" parent="Cities" unique_id=1821589758 instance=ExtResource("2_sl2e5")]
+position = Vector2(13500, 9858)
+
+[node name="Zaraza" parent="Cities" unique_id=685336895 instance=ExtResource("2_sl2e5")]
+position = Vector2(13764, 9643)
+
+[node name="Ciudad Bolivar" parent="Cities" unique_id=1939403299 instance=ExtResource("2_sl2e5")]
+position = Vector2(13914, 9779)
+
+[node name="Maturin" parent="Cities" unique_id=1366228529 instance=ExtResource("2_sl2e5")]
+position = Vector2(13991, 9611)
+
+[node name="Tucupita" parent="Cities" unique_id=554997211 instance=ExtResource("2_sl2e5")]
+position = Vector2(14104, 9685)
+
+[node name="Ciudad Guayana" parent="Cities" unique_id=481621018 instance=ExtResource("2_sl2e5")]
+position = Vector2(14049, 9762)
+
+[node name="El Callao" parent="Cities" unique_id=1022292539 instance=ExtResource("2_sl2e5")]
+position = Vector2(14131, 9832)
+
+[node name="Coro" parent="Cities" unique_id=359685254 instance=ExtResource("2_sl2e5")]
+position = Vector2(13253, 9428)
+
+[node name="Punto Fijo" parent="Cities" unique_id=1361203590 instance=ExtResource("2_sl2e5")]
+position = Vector2(13178, 9394)
+
+[node name="Roads" type="Node2D" parent="." unique_id=1568533679]
+
+[node name="RutaVisual" type="Line2D" parent="." unique_id=1293044883]
+width = 4.0
+default_color = Color(1, 0.41960785, 0.22745098, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1587167561]
+modulate = Color(0.8235294, 0.29411766, 0.21568628, 0.77254903)
+polygon = PackedVector2Array(13464.001, 9752, 13472.001, 9792.001, 13584.001, 9808.001, 13632.001, 9760.001, 13552, 9728)
+uv = PackedVector2Array(13440.001, 9808)

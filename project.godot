@@ -6,24 +6,30 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
-config/name="Conquer World"
-config/icon="res://icon.png"
+config/name="conquer-world"
+run/main_scene="uid://dw4kkj815b676"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
 
-[gui]
+[autoload]
 
-common/drop_mouse_on_gui_input_disabled=true
+NavigationManager="*res://scenes/managers/NavigationManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [physics]
 
-common/enable_pause_aware_picking=true
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
-vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

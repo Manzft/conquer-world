@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c6f3y7j8v2p4s"]
+
+[node name="Road" type="Line2D" unique_id=1963640706]
+width = 1.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2

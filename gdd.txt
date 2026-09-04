@@ -1,5 +1,0 @@
-Nombre: Conquer World
-Descripcion: Un juego donde puedes manejar tu propio pais, expandirte, volverlo un imperio, y conquistar el mundo
-
-¿En que epoca se desarrolla?
-Desde el 1 de enero de 1950 a 2025

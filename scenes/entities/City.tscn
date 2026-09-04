@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://ddlto21j66avx"]
+
+[ext_resource type="Script" uid="uid://c3njmtj72ckyb" path="res://scenes/entities/City.gd" id="1_a2wxp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3oav"]
+radius = 8.246211
+
+[sub_resource type="LabelSettings" id="LabelSettings_nhfxf"]
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[node name="City" type="Area2D" unique_id=1069498352]
+script = ExtResource("1_a2wxp")
+
+[node name="icon" type="ColorRect" parent="." unique_id=812708684]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+mouse_filter = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1164982488]
+shape = SubResource("CircleShape2D_p3oav")
+
+[node name="Label" type="Label" parent="." unique_id=1517470722]
+visible = false
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -16.0
+offset_right = 150.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "City Name"
+label_settings = SubResource("LabelSettings_nhfxf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
